@@ -43,7 +43,7 @@ local status, errmsg, errno = flock:read_lock()
 ```
 try to get a read lock(F_RDLCK) by fnctl with cmd F_SETLK
 
-return 0 if set lock success, otherwise -1 returned with errmsg and errno
+return 0 if set lock success, otherwise nil returned with errmsg and errno
 
 ### write_lock()
 **syntax**
@@ -52,7 +52,7 @@ local status, errmsg, errno = flock:write_lock()
 ```
 try to get a write lock(F_WRLCK) by fnctl with cmd F_SETLK 
 
-return 0 if set lock success, otherwise -1 returned with errmsg and errno
+return 0 if set lock success, otherwise nil returned with errmsg and errno
 
 ### try_read_lock()
 **syntax**
@@ -77,7 +77,7 @@ local status, errmsg, errno = flock:unlock()
 ```
 try to unlock(F_UNLCK) by fnctl with cmd F_SETLK 
 
-return 0 if set success, otherwise -1 returned with errmsg and errno
+return 0 if set success, otherwise nil returned with errmsg and errno
 
 ### delete()
 **syntax**
